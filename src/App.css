@@ -1,38 +1,293 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a; /* Dark background */
+  color: #e6e6e6; /* Light text for contrast */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar styles */
+
+.navbar {
+  background-color: rgba(26, 26, 26, 0.8); /* Darker navbar */
+  padding: 1rem 2rem;
+  position: fixed; /* Fixes the navbar at the top */
+  top: 0; /* Positions the navbar at the very top of the page */
+  left: 0; /* Aligns the navbar to the left edge */
+  width: 100%; /* Ensures the navbar spans the full width of the page */
+  z-index: 1000; /* Ensures the navbar stays on top of other elements */
+  box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-menu {
+  display: flex;
+  align-items: center; /* Centers the items vertically */
+  gap: 2rem; /* Space between menu items */
+  list-style-type: none; /* Remove the bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.navbar-menu li {
+  list-style-type: none; /* Remove the bullets */
+}
+
+.navbar-menu a {
+  color: #E6E6E6;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar-menu a:hover {
+  color: #6BB7FF; /* Hover Effect */
+}
+
+
+/* Skills section styles */
+.skill-tag {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #cfcfcf; /* Set to match your background color */
+  padding: 10px;
+  background-color: #1a1a1a; /* Match the actual background color */
+}
+
+.filter-label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #cfcfcf;
+}
+
+.filter-item {
+  margin-right: 15px;
+  cursor: pointer;
+  color: #cfcfcf;
+  font-size: 14px;
+  text-transform: capitalize;
+  position: relative;
+  text-decoration: none;
+}
+
+.filter-item sup {
+  font-size: 10px;
+  vertical-align: top;
+  margin-left: 2px;
+  color: #8c8c8c;
+}
+
+.filter-item.active {
+  color: #4dabf7; /* Blue color for the selected class */
+  font-weight: bold;
+  border-bottom: 2px solid #4dabf7; /* Blue underline */
+}
+
+.filter-item:not(:last-child)::after {
+  content: '/';
+  margin-left: 10px;
+  color: #cfcfcf;
+}
+
+/* Add hover effect */
+.filter-item:hover {
+  color: #4dabf7; /* Your theme's blue color */
+}
+
+.filter-item:hover::after {
+  color: #4dabf7; /* Blue hover color for slash */
+}
+
+.status-bar {
+  display: flex;
+  gap: 20px;
+}
+
+.skill-advanced {
+  background-color: #85C1E9; /* Light blue */
+  color: #1a1a1a;
+}
+
+.skill-intermediate {
+  background-color: #2874A6; /* Blue */
+}
+
+.skill-beginner {
+  background-color: #1f3f54; /* Dark blue */
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 15px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Contact section styles */
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  color: #fff; /* White text color */
+}
+
+.contact-text {
+  max-width: 40%;
+}
+
+.contact-form {
+  width: 55%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #2a2a2a; /* Dark background color */
+  color: #fff; /* White text color */
+}
+
+
+.contact-form button {
+  background-color: #1f3f54; /* Blue background color */
+  color: #fff; /* White text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Spacing between textarea and button */
+  align-self: flex-start;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+.contact-form button:hover {
+  background-color: #4dabf7; /* Lighter blue on hover */
+  transform: translateY(-2px); /* Slight movement upwards on hover */
+}
+
+.contact-form button:active {
+  background-color: #1f3f54; /* Darker blue on click */
+  transform: translateY(1px); /* Slight movement downwards on click */
+}
+
+
+.contact-icons {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-icons a {
+  margin: 0 10px;
+  color: #fff; /* Icon color */
+  font-size: 24px; /* Adjust icon size */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contact-icons a:hover {
+  color: #4dabf7; /* Blue color on hover */
+}
+
+
+
+@keyframes changeBackground {
+  0% {
+    background-image: url('../public/plane_pink.jpg');
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    background-image: url('../public/la_star.jpg');
   }
+  50% {
+    background-image: url('../public/boston_night.jpg');
+  }
+  75% {
+    background-image: url('../public/hk_bus.jpg');
+  }
+  100% {
+    background-image: url('../public/plane_pink.jpg'); /* Loop back to the first image */
+  }
+}
+
+#home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: changeBackground 15s infinite; /* Change images every 15 seconds */
+  background-color: #1a1a1a;
+  margin: 0; /* Ensure no margin */
+  padding: 0; /* Ensure no padding */
+  overflow: hidden; /* Prevent overflow causing gaps */
+}
+
+#home .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(26, 26, 26, 0.6); /* Semi-transparent black */
+  z-index: 1;
+}
+
+
+
+#home h1 {
+  font-size: 4rem; /* Increases the font size of the heading */
+  margin-bottom: 1rem; /* Adds some space below the heading */
+  font-weight: bold; /* Makes the heading bold */
+  z-index: 2;
+}
+
+#home p {
+  font-size: 1.5rem; /* Increases the font size of the paragraph */
+  z-index: 2;
+}
+
+
+section {
+  padding: 4rem 2rem;
+  border-bottom: 1px solid #333; /* Subtle divider */
+}
+
+h1, h2 {
+  color: #ffffff; /* White text for headers */
+}
+
+p {
+  color: #cccccc; /* Slightly lighter color for paragraphs */
+  line-height: 1.5;
 }
