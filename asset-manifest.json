@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/my-website/static/css/main.206a8df2.css",
-    "main.js": "/my-website/static/js/main.a4558cb8.js",
+    "main.css": "/my-website/static/css/main.9746fc83.css",
+    "main.js": "/my-website/static/js/main.6e91364c.js",
     "static/js/453.195b869a.chunk.js": "/my-website/static/js/453.195b869a.chunk.js",
-    "static/media/boston_night.jpg": "/my-website/static/media/boston_night.5324736036738df39150.jpg",
+    "static/media/boston_maple.jpg": "/my-website/static/media/boston_maple.8ac6c3930cd947bcb340.jpg",
     "static/media/la_star.jpg": "/my-website/static/media/la_star.ed77ce7bc18bd881d717.jpg",
     "static/media/hk_bus.jpg": "/my-website/static/media/hk_bus.f8ef0bc6365076acc5ce.jpg",
     "static/media/plane_pink.jpg": "/my-website/static/media/plane_pink.f8e6e5c3028072442393.jpg",
     "index.html": "/my-website/index.html",
-    "main.206a8df2.css.map": "/my-website/static/css/main.206a8df2.css.map",
-    "main.a4558cb8.js.map": "/my-website/static/js/main.a4558cb8.js.map",
+    "main.9746fc83.css.map": "/my-website/static/css/main.9746fc83.css.map",
+    "main.6e91364c.js.map": "/my-website/static/js/main.6e91364c.js.map",
     "453.195b869a.chunk.js.map": "/my-website/static/js/453.195b869a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.206a8df2.css",
-    "static/js/main.a4558cb8.js"
+    "static/css/main.9746fc83.css",
+    "static/js/main.6e91364c.js"
   ]
 }
