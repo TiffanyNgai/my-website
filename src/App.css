@@ -131,11 +131,12 @@ p {
 }
 
 #home p {
-  font-size: 0.9rem; /* Increases the font size of the paragraph */
+  font-size: 1rem; /* Increases the font size of the paragraph */
   z-index: 2;
 }
 
 #home .subtext {
+  max-width: 600px; /* Limits the width of the subtext */
   font-size: 1rem; /* Slightly smaller font size for the new section */
   z-index: 2;
   margin-top: 0.5rem; /* Adds some space between the two paragraphs */
