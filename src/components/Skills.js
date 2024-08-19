@@ -55,7 +55,6 @@ const SkillsSection = () => {
             <h2>Skills</h2>
             <div className="filter-container">
                 <div className="filter-bar">
-                    <span className="filter-label">Select Filter:</span>
                     {filterCategories.map(category => (
                         <span
                             key={category.category}

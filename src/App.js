@@ -5,6 +5,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import SkillsSection from './components/Skills';
 import Contact from './components/Contact';
+import ProjectsSection from './components/ProjectSection';
+import ExperienceSection from './components/ExperienceSection';
 
 function App() {
     return (
@@ -13,22 +15,20 @@ function App() {
             <section id="home">
                 <div class="overlay"></div>
                 <h1>TIFFANY NGAI</h1>
-                <p>Engineer, Researcher, Developer, Entrepreneur</p>
+                <p>Engineer | Developer | Researcher | Entrepreneur</p>
+                <p class="subtext">"All a person's ways seem pure to them, but motives are weighed by the LORD. Commit to the LORD whatever you do, and he will establish your plans." - Proverbs 16:2-3</p>
             </section>
             <section id="about">
                 <h2>About Me</h2>
-                <p>I'm born and raised in Hong Kong. 倪倩瑩(ngai4 sin3 ying4) is my Chinese name. I went to Canada for my undergraduate degree on Systems Design Engineering at University of Waterloo. I worked in different industries and places before. After all, I realize I am deeply passionate on projects that can bring positive impacts to other people's life with technology. During spare time, I enjoy bouldering, playing drums, playing Go, and taking pictures. I'm also learning music production lately!</p>
+                <p>I'm born and raised in Hong Kong, and my Chinese name is 倪倩瑩(ngai4 sin3 ying4). I am currently studing Systems Design Engineering at University of Waterloo. I've worked in different industries and places, and I've discovered my true passion is to work on projects that use technology to make a positive difference in people's lives. When I'm not working, you'll find me bouldering, playing drums, enjoying a game of Go, or snapping photos. Lately, I've also been diving into music production!</p>
             </section>
             <SkillsSection />
-            <section id="projects">
-                <h2>Projects</h2>
-                <p>rock paper scissors, mnist dnn, sound synthesis, personality clssification, human tracking, solar tracking, </p>
-            </section>
-            <section id="experiences">
-                <h2>Experiences</h2>
-                <p>timeline for work</p>
-            </section>
+            <ProjectsSection />
+            <ExperienceSection />
             <Contact />
+            <footer class="footer">
+                <p>&copy; 2024 Tiffany Ngai</p>
+            </footer>
         </div>
     );
 }
