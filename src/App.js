@@ -20,7 +20,7 @@ function App() {
             </section>
             <section id="about">
                 <h2>About Me</h2>
-                <p>I'm born and raised in Hong Kong, and my Chinese name is 倪倩瑩(ngai4 sin3 ying4). I am currently studing Systems Design Engineering at University of Waterloo. I've worked in different industries and places, and I've discovered my true passion is to work on projects that use technology to make a positive difference in people's lives. When I'm not working, you'll find me bouldering, playing drums, enjoying a game of Go, or snapping photos. Lately, I've also been diving into music production!</p>
+                <p>I'm born and raised in Hong Kong, and my Chinese name is 倪倩瑩 (ngai4 sin3 ying4). I am currently studying Systems Design Engineering at University of Waterloo. I've worked in different industries and places, and I've discovered my true passion is to work on projects that use technology to make a positive difference in people's lives. When I'm not working, you'll find me bouldering, playing drums, enjoying a game of Go, or snapping photos. Lately, I've also been diving into music production!</p>
             </section>
             <SkillsSection />
             <ProjectsSection />
