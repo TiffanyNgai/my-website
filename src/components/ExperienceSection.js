@@ -7,25 +7,25 @@ const experiences = [
     title: 'Undergraduate Research Assistant',
     company: 'University of Waterloo',
     time: 'Jan 2024 - Present',
-    description: 'Developing computational programs for large molecular data analysis and an AI tool for molecular docking. Contributing to research efforts in ArGan’s lab.'
+    description: 'Developing computational programs for large molecular data analysis and an AI tool for molecular docking. Worked in ArGan’s lab under the supervision of Dr. Aravindhan Ganesan.'
   },
   {
     title: 'Researcher',
     company: 'Harvard Medical School and Massachusetts General Hospital',
     time: 'Aug 2023 - Present',
-    description: 'Trained multi-modal machine learning models using Slurm for Alzheimer’s disease case-control and age onset prediction, integrating multi-omics (genomic, proteomic, metabolomic) and EHR data. Identified biomarkers through explainable AI methods, specifically SHAP, and applied early and late fusion techniques to combine diverse data modalities. Worked in the Genetics and Aging Research Unit under the supervision of Dr. Dmitry Prokopenko and Dr. Rudy Tanzi.'
+    description: 'Trained multi-modal machine learning models using Slurm for Alzheimer’s disease affection status and age at onset prediction, integrating multi-omics (genomic, proteomic, metabolomic) and EHR data. Identified biomarkers through explainable AI methods, specifically SHAP, and applied early and late fusion techniques to combine diverse data modalities. Worked in the Genetics and Aging Research Unit under the supervision of Dr. Dmitry Prokopenko and Dr. Rudy Tanzi.'
   },
   {
     title: 'Undergraduate Research Assistant',
     company: 'University of Waterloo',
     time: 'May 2023 - Aug 2023',
-    description: 'Finetuned and benchmarked various state-of-the-art models for Alzheimer’s disease severity classification using MRI images in PyTorch. Conducted a comprehensive literature review on medical image classification for Alzheimer’s disease. Contributed to research in the Vision and Image Processing lab under the supervision of Amy Tai.'
+    description: 'Finetuned and benchmarked various state-of-the-art models for Alzheimer’s disease severity classification using MRI in PyTorch. Conducted literature review on medical image for Alzheimer’s disease. Worked in the Vision and Image Processing Lab under the supervision of Amy Tai.'
   },
   {
     title: 'Machine Learning Engineer',
     company: 'Gridspace',
     time: 'Jan 2023 - Apr 2023',
-    description: 'Developed and implemented large language models for abstractive dialogue summarization utilizing Transformers, PyTorch, and NLTK libraries on a Linux virtual machine in Google Cloud Platform (GCP). Addressed model bias issues by augmenting data points and enhanced the summarization model\'s input token limit twofold through an effective compression method.'
+    description: 'Developed and implemented large language models for abstractive dialogue summarization utilizing Transformers, PyTorch, and NLTK libraries on a Linux virtual machine in Google Cloud Platform (GCP). Addressed model bias issues by augmenting data points and enhanced the summarization model\'s input token limit twofold through compression methods.'
   },
   {
     title: 'Firmware Developer',
