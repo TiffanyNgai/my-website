@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-website/static/css/main.94012346.css",
-    "main.js": "/my-website/static/js/main.9d342265.js",
+    "main.js": "/my-website/static/js/main.426ea2fb.js",
     "static/js/453.195b869a.chunk.js": "/my-website/static/js/453.195b869a.chunk.js",
     "static/media/boston_maple.jpg": "/my-website/static/media/boston_maple.8ac6c3930cd947bcb340.jpg",
     "static/media/la_star.jpg": "/my-website/static/media/la_star.ed77ce7bc18bd881d717.jpg",
@@ -9,11 +9,11 @@
     "static/media/plane_pink.jpg": "/my-website/static/media/plane_pink.f8e6e5c3028072442393.jpg",
     "index.html": "/my-website/index.html",
     "main.94012346.css.map": "/my-website/static/css/main.94012346.css.map",
-    "main.9d342265.js.map": "/my-website/static/js/main.9d342265.js.map",
+    "main.426ea2fb.js.map": "/my-website/static/js/main.426ea2fb.js.map",
     "453.195b869a.chunk.js.map": "/my-website/static/js/453.195b869a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.94012346.css",
-    "static/js/main.9d342265.js"
+    "static/js/main.426ea2fb.js"
   ]
 }
