@@ -20,7 +20,7 @@ function App() {
             </section>
             <section id="about">
                 <h2>About Me</h2>
-                <p>I'm born and raised in Hong Kong, and my Chinese name is 倪倩瑩 (ngai4 sin3 ying4). I am currently studying Systems Design Engineering at University of Waterloo. I've worked in different industries and places, and I've discovered my true passion is to work on projects that use technology to make a positive difference in people's lives. When I'm not working, you'll find me bouldering, playing drums, enjoying a game of Go, or snapping photos. Lately, I've also been diving into music production!</p>
+                <p>I am passionate about applying AI, machine learning, and 3D modeling technologies to solve real-world problems. My experience spans research, industry, and entrepreneurship, where I have developed scalable ML models, full-stack web applications, and 3D simulation pipelines. I enjoy working on complex technical challenges that are impactful to bring user focused solutions to life. Feel free to check out some of my projects below!</p>
             </section>
             <SkillsSection />
             <ProjectsSection />

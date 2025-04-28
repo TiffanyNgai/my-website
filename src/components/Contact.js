@@ -55,7 +55,7 @@ const Contact = () => {
                 <a href="https://www.linkedin.com/in/tiffany-ngai-4887481b6" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </a>
-                <a href="https://github.com/TiffanyNgai?tab=repositories" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/TiffanyNgai" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faGithub} size="2x" />
                 </a>
             </div>

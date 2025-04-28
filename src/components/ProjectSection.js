@@ -5,6 +5,14 @@ import ProjectModal from './ProjectModal';
 const projects = [
     // Add more projects here
     {
+        title: '3D Clothing Virtual Try-On and Sizing Recommendation',
+        video: '/3d_try_on_demo.mov',
+        stack: ['React.js', 'Three.js', 'Tailwind CSS', 'django', 'FastAPI', 'AWS (S3, EC2)', 'blender', 'Open3D'],
+        date: 'Sep 2024 - Apr 2025',
+        description: 'The goal of this project was to enable shoppers to perform 3D virtual try-ons using their personalized avatars and to receive accurate sizing recommendations when shopping online. The platform also allows retailers to generate realistic 3D garment models from a single image of a clothing item. I was responsible for developing the avatar generation pipeline from 360° phone videos, the try-on simulation system for visualizing garments on avatars, and the sizing recommendation engine based on inferred body measurements. Additionally, I implemented these features into a Shopify extension to seamlessly integrate the 3D try-on and sizing experience into online storefronts. The avatar generation achieved an average body dimension error of less than 4 cm, and the sizing recommendation reached an accuracy of 83%. Technologies used include React.js, Three.js, Tailwind CSS, Django, FastAPI, AWS (EC2, S3), Blender, and Open3D.',
+        additionalImages: []
+    },    
+    {
         title: 'AI Call Center Summarization Model @ Gridspace',
         image: '/summarization.jpg',
         stack: ['python', 'pytorch', 'transformers', 'natural language processing', 'nltk', 'linux', 'large language model'],
