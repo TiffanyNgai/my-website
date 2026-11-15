@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/my-website/static/css/main.94012346.css",
-    "main.js": "/my-website/static/js/main.249d07b6.js",
+    "main.css": "/my-website/static/css/main.5f781da2.css",
+    "main.js": "/my-website/static/js/main.b6b1ccf9.js",
+    "static/js/279.652c5f45.chunk.js": "/my-website/static/js/279.652c5f45.chunk.js",
     "static/js/453.195b869a.chunk.js": "/my-website/static/js/453.195b869a.chunk.js",
-    "static/media/boston_maple.jpg": "/my-website/static/media/boston_maple.8ac6c3930cd947bcb340.jpg",
-    "static/media/la_star.jpg": "/my-website/static/media/la_star.ed77ce7bc18bd881d717.jpg",
-    "static/media/hk_bus.jpg": "/my-website/static/media/hk_bus.f8ef0bc6365076acc5ce.jpg",
-    "static/media/plane_pink.jpg": "/my-website/static/media/plane_pink.f8e6e5c3028072442393.jpg",
+    "static/js/408.9f819cf1.chunk.js": "/my-website/static/js/408.9f819cf1.chunk.js",
     "index.html": "/my-website/index.html",
-    "main.94012346.css.map": "/my-website/static/css/main.94012346.css.map",
-    "main.249d07b6.js.map": "/my-website/static/js/main.249d07b6.js.map",
-    "453.195b869a.chunk.js.map": "/my-website/static/js/453.195b869a.chunk.js.map"
+    "main.5f781da2.css.map": "/my-website/static/css/main.5f781da2.css.map",
+    "main.b6b1ccf9.js.map": "/my-website/static/js/main.b6b1ccf9.js.map",
+    "279.652c5f45.chunk.js.map": "/my-website/static/js/279.652c5f45.chunk.js.map",
+    "453.195b869a.chunk.js.map": "/my-website/static/js/453.195b869a.chunk.js.map",
+    "408.9f819cf1.chunk.js.map": "/my-website/static/js/408.9f819cf1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.94012346.css",
-    "static/js/main.249d07b6.js"
+    "static/css/main.5f781da2.css",
+    "static/js/main.b6b1ccf9.js"
   ]
 }
