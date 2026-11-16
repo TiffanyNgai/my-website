@@ -269,7 +269,9 @@ export const OffTheClock = () => (
                 <p className="muted">
                     Building things because they’re fun, like{' '}
                     <a href="https://tiffanyngai.github.io/aha/" target="_blank" rel="noopener noreferrer">AHA!</a>,
-                    a STEM learning app for solidifying the foundations.
+                    a STEM learning app for solidifying the foundations, and{' '}
+                    <a href="https://tiffanyngai.github.io/focus/" target="_blank" rel="noopener noreferrer">Focus</a>,
+                    a minimal timer and clock dashboard for deep work.
                 </p>
             </article>
         </div>

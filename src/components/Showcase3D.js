@@ -127,7 +127,7 @@ const Showcase3D = ({ onExit }) => {
         const camera = new THREE.PerspectiveCamera(60, el.clientWidth / el.clientHeight, 0.1, 300);
 
         scene.add(new THREE.AmbientLight(0xffffff, 0.75));
-        const lamp = new THREE.PointLight(0xffffff, 60, 40);
+        const lamp = new THREE.PointLight(0xffffff, 40, 40);
         scene.add(lamp);
 
         const disposables = [];
@@ -172,6 +172,7 @@ const Showcase3D = ({ onExit }) => {
         const pickables = [];
         const cards = [];
         const atoms = [];
+        const stops = [];
         let lastYear = null;
 
         items.forEach((item, i) => {
@@ -179,6 +180,10 @@ const Showcase3D = ({ onExit }) => {
             const side = i % 2 ? 1 : -1;
             const color = new THREE.Color(TAGS[item.tags[0]].color);
             const centre = new THREE.Vector3(pathX(z), pathY(z), z);
+            const stop = new THREE.Group();
+            stop.userData.z = z;
+            scene.add(stop);
+            stops.push(stop);
 
             const atomMat = track(
                 new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.55, roughness: 0.35 })
@@ -186,7 +191,7 @@ const Showcase3D = ({ onExit }) => {
             const atom = new THREE.Mesh(atomGeo, atomMat);
             atom.position.copy(centre);
             atom.userData.index = i;
-            scene.add(atom);
+            stop.add(atom);
             atoms.push(atom);
             pickables.push(atom);
 
@@ -195,9 +200,9 @@ const Showcase3D = ({ onExit }) => {
             [[-side * 1.1, 0.8, 0.5], [-side * 0.9, -0.8, -0.6]].forEach(([dx, dy, dz]) => {
                 const s = new THREE.Mesh(smallGeo, atomMat);
                 s.position.set(centre.x + dx, centre.y + dy, centre.z + dz);
-                scene.add(s);
+                stop.add(s);
                 const g = track(new THREE.BufferGeometry().setFromPoints([centre, s.position]));
-                scene.add(new THREE.Line(g, lineMat));
+                stop.add(new THREE.Line(g, lineMat));
             });
 
             const canvas = document.createElement('canvas');
@@ -208,20 +213,12 @@ const Showcase3D = ({ onExit }) => {
             tex.colorSpace = THREE.SRGBColorSpace;
             tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
             const card = new THREE.Mesh(cardGeo, track(new THREE.MeshBasicMaterial({ map: tex, transparent: true })));
-            card.position.set(centre.x + side * 3.5, centre.y + 0.75, z);
-            card.rotation.y = -side * 0.3;
-            card.userData = { index: i, canvas, tex, item, base: card.position.y, scale: 1 };
-            scene.add(card);
+            const bond = track(new THREE.BufferGeometry());
+            card.userData = { index: i, canvas, tex, item, base: 0, scale: 1, centre, side, bond };
+            stop.add(card);
             cards.push(card);
             pickables.push(card);
-
-            const bond = track(
-                new THREE.BufferGeometry().setFromPoints([
-                    centre,
-                    new THREE.Vector3(centre.x + side * 1.3, centre.y + 0.4, z),
-                ])
-            );
-            scene.add(new THREE.Line(bond, lineMat));
+            stop.add(new THREE.Line(bond, lineMat));
 
             if (item.year && item.year !== lastYear) {
                 const label = labelSprite(String(item.year));
@@ -232,6 +229,29 @@ const Showcase3D = ({ onExit }) => {
                 lastYear = item.year;
             }
         });
+
+        // Cards sit beside their atom on wide screens and above it on portrait ones,
+        // and the camera pulls back just far enough to keep the nearest card in frame.
+        let pullBack = 0;
+        const layout = () => {
+            const portrait = camera.aspect < 1;
+            cards.forEach((c) => {
+                const { centre, side, bond } = c.userData;
+                if (portrait) {
+                    c.position.set(centre.x + side * 0.5, centre.y + 2.2, centre.z);
+                    c.rotation.y = -side * 0.1;
+                } else {
+                    c.position.set(centre.x + side * 3.5, centre.y + 0.75, centre.z);
+                    c.rotation.y = -side * 0.3;
+                }
+                c.userData.base = c.position.y;
+                bond.setFromPoints([centre, centre.clone().lerp(c.position, 0.38)]);
+            });
+            const halfFov = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+            const reach = portrait ? 3.3 : 6.4; // how far from centre the card's outer edge sits
+            pullBack = Math.max(0, reach / (halfFov * camera.aspect) - 7.5);
+        };
+        layout();
 
         // Web fonts may land after the first draw; redraw the cards once they are ready.
         if (document.fonts && document.fonts.ready) {
@@ -265,7 +285,7 @@ const Showcase3D = ({ onExit }) => {
             pointer.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
             ray.setFromCamera(pointer, camera);
             const hit = ray.intersectObjects(pickables, false)[0];
-            return hit && hit.distance < 30 ? hit.object : null;
+            return hit && hit.distance < 30 && hit.object.parent.visible ? hit.object : null;
         };
 
         const onWheel = (e) => {
@@ -318,6 +338,7 @@ const Showcase3D = ({ onExit }) => {
             camera.aspect = el.clientWidth / el.clientHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(el.clientWidth, el.clientHeight);
+            layout();
         };
 
         const dom = renderer.domElement;
@@ -337,12 +358,14 @@ const Showcase3D = ({ onExit }) => {
             current += (target - current) * (reduce ? 1 : 0.07);
 
             const z = 7.5 - current;
-            // On narrow screens pull back so the cards still fit.
-            const narrow = camera.aspect < 1 ? (1 - camera.aspect) * 9 : 0;
-            camera.position.set(pathX(z) * 0.4 + mouse.x * 0.7, pathY(z) * 0.4 + 1.7 - mouse.y * 0.4, z + narrow);
+            camera.position.set(pathX(z) * 0.4 + mouse.x * 0.7, pathY(z) * 0.4 + 1.7 - mouse.y * 0.4, z + pullBack);
             look.set(pathX(z - 9) * 0.7, pathY(z - 9) * 0.6 + 0.5, z - 9);
             camera.lookAt(look);
             lamp.position.copy(camera.position);
+            // Hide stops the camera has reached, so nothing looms right in front of the lens.
+            stops.forEach((g) => {
+                g.visible = camera.position.z - g.userData.z > 3.5;
+            });
 
             atoms.forEach((a, i) => {
                 const pulse = 1 + Math.sin(t * 2 + i) * 0.06 + (hovered === i ? 0.25 : 0);

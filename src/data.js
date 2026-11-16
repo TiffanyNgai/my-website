@@ -227,6 +227,23 @@ export const items = [
         ],
         links: [{ label: 'Try AHA!', href: 'https://tiffanyngai.github.io/aha/' }],
     },
+    {
+        id: 'focus',
+        kind: 'fun',
+        title: 'Focus',
+        org: 'Side project',
+        date: 'Ongoing',
+        year: null,
+        sort: 1000000,
+        tags: ['builds'],
+        summary: 'A minimal focus dashboard with a clock, timer, stopwatch, and focus calendar.',
+        points: [
+            'A single calm screen for deep work: a large clock, a countdown timer, and a stopwatch.',
+            'Timer presets of 15, 30, and 60 minutes, or a custom length.',
+            'A focus calendar, local weather for your city, and toggles to show only the widgets you want.',
+        ],
+        links: [{ label: 'Try Focus', href: 'https://tiffanyngai.github.io/focus/' }],
+    },
 ];
 
 export const publications = [
