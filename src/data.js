@@ -223,11 +223,10 @@ export const items = [
         points: [
             'Searches the buyer’s past purchases and rejections with MongoDB Atlas Vector Search before recommending anything.',
             'Writes each conclusion to an append-only, hash-chained audit log. Each recommendation is a plan that cites a conclusion by event ID, and the server rejects any plan that cites a conclusion that does not exist.',
-            'A reviewer can trace any product back through its plan, its conclusion, and the supporting purchase records.',
-            'Pays through a provider that issues single-use tokens, each scoped to one merchant, session, amount, and expiry.',
+            'A user can trace any product back through its plan, its conclusion, and the supporting purchase records.',
             'Saves the full conversation transcript, including all tool calls and results, to MongoDB after every completed purchase.',
         ],
-        tools: ['Kotlin', 'Ktor', 'MongoDB Atlas Vector Search', 'Voyage AI', 'Agentic Commerce Protocol', 'Python'],
+        tools: ['MongoDB Atlas Vector Search', 'Agentic Commerce Protocol', 'Python', 'Agentic AI'],
         links: [
             { label: 'Watch the demo', href: 'https://youtu.be/qQ57di9a-z4?si=bpmzGuZS1c7xMb-h' },
             { label: 'Code on GitHub', href: 'https://github.com/tahachm/mongodb-hack-2026' },
