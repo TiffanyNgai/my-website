@@ -228,7 +228,10 @@ export const items = [
             'Saves the full conversation transcript, including all tool calls and results, to MongoDB after every completed purchase.',
         ],
         tools: ['Kotlin', 'Ktor', 'MongoDB Atlas Vector Search', 'Voyage AI', 'Agentic Commerce Protocol', 'Python'],
-        links: [{ label: 'Code on GitHub', href: 'https://github.com/tahachm/mongodb-hack-2026' }],
+        links: [
+            { label: 'Watch the demo', href: 'https://youtu.be/qQ57di9a-z4?si=bpmzGuZS1c7xMb-h' },
+            { label: 'Code on GitHub', href: 'https://github.com/tahachm/mongodb-hack-2026' },
+        ],
     },
     {
         id: 'aha',
